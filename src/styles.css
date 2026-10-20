@@ -87,6 +87,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
   -webkit-text-size-adjust: 100%;
+  /* Native controls, scrollbars and the browser UI follow the dark theme */
+  color-scheme: dark;
 }
 
 body {
@@ -100,6 +102,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  /* Kill the grey/blue flash box Android and iOS draw over tapped links */
+  -webkit-tap-highlight-color: transparent;
+  /* Allow normal vertical panning while preventing accidental horizontal
+     drags and double-tap zoom jumping on touch screens. */
+  touch-action: pan-y;
+  /* Nothing should be able to pull the page sideways on a phone */
+  overscroll-behavior-x: none;
+}
+
+/* Interactive elements: remove the tap flash and keep touch panning natural.
+   These are hints only; pointer/keyboard users are unaffected. */
+a,
+button,
+[role='button'] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 img {
@@ -490,7 +508,12 @@ html.reveal-armed [data-reveal]:not(.is-in) .split-word {
 }
 
 .mobile-menu.is-open {
-  max-height: 32rem;
+  /* Never taller than the space left under the header, and scrollable when
+     the list is longer than the screen (small or landscape phones). */
+  max-height: min(32rem, calc(100dvh - 4.25rem));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   opacity: 1;
   visibility: visible;
   border-top-color: var(--carbon-line);
@@ -2704,6 +2727,135 @@ html:not(.reveal-armed) .icon-chip {
 @media (min-width: 1760px) {
   :root {
     --shell: 1360px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE PORTABILITY
+   --------------------------------------------------------------------------
+   Applies to touch/small-screen browsers. Keeps the desktop design intact
+   while making the site comfortable and safe on phones.
+   ========================================================================== */
+
+/* Safe-area insets: clear the notch, home indicator and rounded corners.
+   `env()` returns 0 on devices without insets, so desktop is untouched. */
+.site-header__inner {
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+.mobile-menu__list {
+  padding-bottom: calc(1.1rem + env(safe-area-inset-bottom, 0px));
+}
+
+.site-footer {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (max-width: 1000px) {
+  /* Touch ergonomics: every tappable control gets a comfortable target
+     (~44px tall) and adequate horizontal padding. */
+  .site-nav__list a,
+  .mobile-menu__list a {
+    min-height: 44px;
+    padding-block: 0.75rem;
+  }
+
+  .menu-toggle {
+    /* Expand the whole button hit area, not just the 20px icon */
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: flex-end;
+    padding: 0.5rem 0 0.5rem 0.75rem;
+    margin-right: calc(env(safe-area-inset-right, 0px) * -1);
+  }
+
+  .header-cta,
+  .btn,
+  .xlink,
+  .profiles__link,
+  .award__zoom,
+  .lightbox__close,
+  .hero__cue {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Standalone links in the footer and the wordmark are also controls, not
+     inline prose. They need `inline-flex` because `min-height` is ignored on
+     inline elements. */
+  .site-footer__links a,
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* Give inline text links in flowing copy a taller tap strip without
+     changing the visual layout. */
+  .proj-row__links .xlink,
+  .contact__cell a,
+  .contact__cta {
+    min-height: 44px;
+  }
+}
+
+/* Keep the sticky header from obscuring an anchored section on small screens
+   where the header is shorter. */
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 4.75rem;
+  }
+
+  /* Long unbreakable strings (URLs, emails, long words) must never force a
+     horizontal scroll on a narrow phone. */
+  .feat__title,
+  .proj-row__title,
+  .paper__title,
+  .hero__name,
+  .profiles__label,
+  .contact__cell a,
+  .contact__deck {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .site-footer,
+  .site-footer__links,
+  .contact__cell {
+    overflow-wrap: break-word;
+  }
+}
+
+/* Extra-narrow phones (<= 360px): trim the hero type so nothing crowds. */
+@media (max-width: 360px) {
+  :root {
+    --gut: 0.9rem;
+  }
+
+  .hero__name {
+    font-size: clamp(2rem, 13vw, 2.5rem);
+  }
+
+  .wordmark__name {
+    font-size: 0.82rem;
+  }
+
+  .icon-strip {
+    grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  }
+}
+
+/* Phones in landscape: use the extra width for two columns again where it
+   helps, and make sure the menu still fits vertically. */
+@media (max-height: 480px) and (orientation: landscape) {
+  .mobile-menu.is-open {
+    max-height: calc(100dvh - 3.5rem - env(safe-area-inset-bottom, 0px));
+  }
+
+  .hero {
+    padding-block: 1.25rem 1.75rem;
   }
 }
 

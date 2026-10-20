@@ -73,6 +73,26 @@ as a compact panel inside the Research section. Both open in a new tab with
 `rel="noopener noreferrer"`. No citation counts, publication counts, or other
 metrics are displayed, because none were supplied.
 
+### Mobile portability
+
+The layout is responsive from 320px up, and the mobile experience is hardened
+for touch browsers:
+
+- `viewport-fit=cover` plus `env(safe-area-inset-*)` padding keeps the header,
+  menu and footer clear of notches, rounded corners and the home indicator.
+- The "MOBILE PORTABILITY" block in `styles.css` gives every standalone control
+  (menu toggle, nav links, buttons, project links, footer links) a 44px minimum
+  touch target. The rules are gated behind `max-width: 1000px`, so desktop
+  sizing is unchanged.
+- `-webkit-tap-highlight-color: transparent` removes the grey flash box on
+  tapped links; `touch-action: manipulation` prevents double-tap zoom jumps.
+- The mobile menu is capped at `min(32rem, calc(100dvh - 4.25rem))` and scrolls,
+  so it can never clip on short or landscape phones.
+- `overflow-wrap` guards on long strings keep URLs and titles from forcing a
+  horizontal scroll; `color-scheme: dark` makes native controls match the theme.
+- The web manifest uses the dark `#0b0e14` theme/background so the Android
+  status bar and splash screen match the site.
+
 ## Deploy (Vercel)
 
 - Framework: **Vite** (auto-detected)
