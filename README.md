@@ -1,81 +1,83 @@
-# Personal Portfolio & Research Showcase — Iqbal Hossain Safy
+# Iqbal Hossain Safy — Portfolio
 
-A high-performance, fully responsive personal portfolio website showcasing **Web Development projects, AI & Machine Learning research, Computer Vision work, and academic publications**.
+Personal portfolio site for **Iqbal Hossain Safy** — Web Developer · Machine Learning · Computer Vision · App Testing.
 
-## ✨ Key Features
+Built with **React 19 + Vite**. Design direction: motorsport-engineering editorial — carbon-black and paper surfaces, one racing-red signal colour, condensed uppercase technical labels (Barlow Condensed), Fraunces for the display serif and Inter for body text. All motion is 2D (CSS/SVG transforms and opacity); there is no 3D, no WebGL, and no animation library.
 
-### Premium Design System
-A refined dark/light theme built with CSS custom properties, `Space Grotesk` + `Inter` typography, restrained gradients, subtle background fields, and elegant cards, badges, and micro-interactions — designed with restraint rather than visual noise.
+The hero, the technology-icon strip, and the ICIDA 2025 certificate block were rebuilt in this revision; the previous blank-hero bug is fixed at the root (see "Reveal system" below).
 
-### Dark & Light Theme
-First-visit theme follows the system preference and is also fully **persistable** via a toggle in the navigation (`localStorage`-backed), with correct `prefers-color-scheme` handling and a `theme-color` meta sync.
-
-### Responsive Mobile Experience
-A touch-friendly slide-in navigation drawer with a blurred backdrop scrim, **ESC / backdrop / link-click** to close, body scroll-lock, and accessible `aria-expanded` / `aria-controls` wiring.
-
-### Navigation & Scroll State
-Sticky blurred header with shadow-on-scroll, per-section **ScrollSpy active indicator** (`aria-current`), smooth scrolling, and a back-to-top control.
-
-### SEO & Metadata
-**Schema.org JSON-LD** (Person + WebSite), Open Graph + Twitter/X cards, canonical URL, semantic HTML5, proper heading hierarchy, and descriptive image alt text.
-
-### Performance
-Built on **native ES6+, zero dependencies** — no heavy frameworks or libraries. IntersectionObserver reveal animations, requestAnimationFrame-throttled scroll handlers, an **optimized WebP profile image** (96% smaller than the source JPEG), `preload` for the LCP image, and `prefers-reduced-motion` support throughout.
-
-### Accessibility
-Semantic landmarks, visible focus states, keyboard navigation, skip link, sufficient color contrast, and reduced-motion fallbacks.
-
----
-
-## 🛠️ Project Structure
-
-```text
-safy/
-├── assets/
-│   ├── favicon/               # Favicon set, manifest, social OG image
-│   ├── icons/                 # Tech logo SVGs (define-then-inline sprite)
-│   └── images/
-│       └── profile/           # Optimized profile imagery (WebP)
-├── css/
-│   └── style.css              # Tokens, layout, sections, responsive, motion
-├── js/
-│   └── main.js                # Theme, navigation, scrollspy, reveal, smooth scroll
-├── index.html                 # Single page with SEO + JSON-LD metadata
-└── README.md                  # Project documentation
-```
-
-## 🧱 Tech Stack
-
-- **Vanilla HTML5 / CSS3** (custom properties, grid, backdrop-filter)
-- **Native JavaScript (ES6+) — no frameworks, no build step**
-- Google Fonts (Space Grotesk + Inter)
-- Icons: inline `currentColor` SVGs — tech logos are a single inlined symbol sprite (no icon fonts, no external requests)
-
-## ▶️ Run Locally
-
-Open `index.html` directly in a web browser, or use a simple static server:
+## Run locally
 
 ```bash
-python3 -m http.server 8000
-# or
-npx serve
+npm install
+npm run dev       # dev server
+npm run build     # production build → dist/
+npm run preview   # serve the production build
 ```
 
-Then visit `http://localhost:8000`.
+## Structure
 
-## 🌗 Theme
+```
+index.html            # Vite entry + SEO metadata + JSON-LD
+public/assets/        # favicons, portrait, project screenshot, certificate
+src/
+  App.jsx             # section composition
+  hooks.js            # reveal (fail-safe), scroll-spy, Dhaka clock
+  styles.css          # design system — tokens + all component styles
+  components/         # Header, Hero, About, Skills, Work, AiVision,
+                      # Research, ResearchProfiles, CertificateModal,
+                      # Experience, Contact, Footer, SecHead, SplitWords,
+                      # TechIcon
+  data/content.js     # ALL site content in one place
+```
 
-- Defaults to the OS color scheme on first visit.
-- Use the sun/moon toggle in the header to switch and persist a preference.
+Edit `src/data/content.js` to update projects, experience, skills, research, and contact details.
 
-## 📬 Contact & Social
+### Reveal system (why the hero can no longer go blank)
 
-- **Email:** ihsafy2k21@gmail.com
-- **Phone / WhatsApp:** +880 1724 612320
-- **GitHub:** [ihsafy](https://github.com/ihsafy)
-- **LinkedIn:** [Iqbal Hossain Safy](https://linkedin.com/in/iqbal-hossain-safy)
-- **Facebook:** [ih.safy](https://www.facebook.com/ih.safy/)
+Content is **visible by default**. JavaScript measures which elements are already
+on screen and only then adds `reveal-armed` to `<html>`, which is the sole switch
+that lets CSS hide below-the-fold elements for their entrance animation. If the
+script never runs, throws, or the observer never fires, everything stays visible;
+a 2.5 s timer also reveals anything still hidden. `prefers-reduced-motion` skips
+the animation entirely.
 
-## 📄 License
+### Technology icons
 
-This project is a personal portfolio website created by [Iqbal Hossain Safy](https://github.com/ihsafy).
+Logos come from [`simple-icons`](https://simpleicons.org) (CC0-1.0) as inline SVG.
+Only named imports are used so Vite tree-shakes them, and every slug is verified
+to exist in the installed version. Logos that Simple Icons does not ship for
+brand-policy reasons (Java, VS Code, the Microsoft Office apps) render as a
+plain row label with no substitute image.
+
+### Certificate image
+
+The ICIDA 2025 certificate is stored as `.jpg` (not `.jfif`) so it is served with
+the correct `image/jpeg` content type. The original file is preserved outside the
+repository and was not modified.
+
+### Hero accent image
+
+The image beneath the portrait in the hero is the file supplied by Iqbal, copied
+unchanged into `public/assets/images/hero-car.avif`. It is a 3392×1908 (16:9)
+AVIF; the markup declares those intrinsic dimensions and the CSS uses
+`aspect-ratio` plus `object-fit: contain`, so the picture is never cropped or
+stretched. It shares the right column's width with the portrait card, sitting at
+a constant 340px maximum on desktop and scaling down with the viewport. The
+earlier inline-SVG racing-car illustration and its frame have been removed.
+
+### Research profiles
+
+`ResearchProfiles` renders the two academic links (Google Scholar, ResearchGate)
+as a compact panel inside the Research section. Both open in a new tab with
+`rel="noopener noreferrer"`. No citation counts, publication counts, or other
+metrics are displayed, because none were supplied.
+
+## Deploy (Vercel)
+
+- Framework: **Vite** (auto-detected)
+- Build command: `npm run build`
+- Output directory: `dist`
+- No server, database, or paid services required — static build, Vercel Hobby compatible.
+
+Canonical URL: <https://ihsafy.vercel.app>

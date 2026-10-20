@@ -1,956 +1,119 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Iqbal Hossain Safy — Web Developer &amp; ML Engineer</title>
-    <meta name="description" content="Portfolio of Iqbal Hossain Safy — Web Developer & ML Engineer. Building modern web applications and intelligent solutions with Machine Learning, Computer Vision, and Image Processing.">
-    <meta name="author" content="Iqbal Hossain Safy">
-    <meta name="theme-color" content="#0b0b10">
+    <title>Iqbal Hossain Safy — Web Developer, Machine Learning &amp; App Tester</title>
+    <meta
+      name="description"
+      content="Portfolio of Iqbal Hossain Safy — Web Developer, Machine Learning & Computer Vision, and App Tester at Taraa AI Technology in Dhaka, Bangladesh. Selected work, research in interpretable AI, and software testing experience."
+    />
+    <meta name="author" content="Iqbal Hossain Safy" />
+    <meta name="theme-color" content="#0b0e14" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://ihsafy.github.io/">
+    <link rel="canonical" href="https://ihsafy.vercel.app/" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Iqbal Hossain Safy">
-    <meta property="og:title" content="Iqbal Hossain Safy — Web Developer &amp; ML Engineer">
-    <meta property="og:description" content="Web Developer & ML Engineer building modern web applications and intelligent solutions with Machine Learning, Computer Vision, and Image Processing.">
-    <meta property="og:url" content="https://ihsafy.github.io/">
-    <meta property="og:image" content="https://ihsafy.github.io/assets/favicon/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Iqbal Hossain Safy — Web Developer & ML Engineer">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Iqbal Hossain Safy" />
+    <meta property="og:title" content="Iqbal Hossain Safy — Web Developer, Machine Learning &amp; App Tester" />
+    <meta
+      property="og:description"
+      content="Web Developer, ML & Computer Vision, and App Tester at Taraa AI Technology — selected work, interpretable AI research, and software testing."
+    />
+    <meta property="og:url" content="https://ihsafy.vercel.app/" />
+    <meta property="og:image" content="https://ihsafy.vercel.app/assets/favicon/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Iqbal Hossain Safy — portfolio preview" />
+    <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Iqbal Hossain Safy — Web Developer &amp; ML Engineer">
-    <meta name="twitter:description" content="Web Developer & ML Engineer building modern web applications and intelligent solutions with Machine Learning, Computer Vision, and Image Processing.">
-    <meta name="twitter:image" content="https://ihsafy.github.io/assets/favicon/og-image.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Iqbal Hossain Safy — Web Developer, Machine Learning &amp; App Tester" />
+    <meta
+      name="twitter:description"
+      content="Web Developer, ML & Computer Vision, and App Tester at Taraa AI Technology in Dhaka, Bangladesh."
+    />
+    <meta name="twitter:image" content="https://ihsafy.vercel.app/assets/favicon/og-image.png" />
 
-    <!-- Favicons -->
-    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="assets/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="alternate icon" href="/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
-    <!-- Apply theme before CSS paints (prevents flash of wrong theme) -->
-    <script>
-        (function () {
-            document.documentElement.classList.add('js');
-            try {
-                var t = localStorage.getItem('safy-theme');
-                if (t !== 'light' && t !== 'dark') {
-                    t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-                }
-                document.documentElement.setAttribute('data-theme', t);
-            } catch (e) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            }
-        })();
-    </script>
+    <!-- Type -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/assets/images/profile/safy-portrait-600.webp"
+    />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Preload LCP image -->
-    <link rel="preload" as="image" href="./assets/images/profile/safy-portrait-600.webp" fetchpriority="high" type="image/webp">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Structured Data: Person -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Iqbal Hossain Safy",
-      "givenName": "Iqbal Hossain",
-      "familyName": "Safy",
-      "jobTitle": "Web Developer & ML Engineer",
-      "url": "https://ihsafy.github.io/",
-      "image": "https://ihsafy.github.io/assets/images/profile/safy-portrait-600.webp",
-      "email": "mailto:ihsafy2k21@gmail.com",
-      "telephone": "+8801724612320",
-      "sameAs": [
-        "https://github.com/ihsafy",
-        "https://www.linkedin.com/in/ihsafy",
-        "https://www.facebook.com/ih.safy/"
-      ],
-      "knowsAbout": [
-        "Web Development",
-        "Software Engineering",
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Deep Learning",
-        "Computer Vision",
-        "Image Processing",
-        "Explainable AI",
-        "Large Language Models"
-      ],
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "East West University"
-      }
-    }
-    </script>
-
-    <!-- Structured Data: WebSite -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Iqbal Hossain Safy",
-      "url": "https://ihsafy.github.io/",
-      "description": "Portfolio and research showcase of Iqbal Hossain Safy — Web Developer & ML Engineer.",
-      "author": {
+      {
+        "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Iqbal Hossain Safy"
+        "name": "Iqbal Hossain Safy",
+        "url": "https://ihsafy.vercel.app/",
+        "image": "https://ihsafy.vercel.app/assets/images/profile/safy-portrait-600.webp",
+        "jobTitle": "App Tester & Web Developer",
+        "email": "mailto:ihsafy2k21@gmail.com",
+        "telephone": "+8801724612320",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dhaka",
+          "addressCountry": "Bangladesh"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Taraa AI Technology"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "East West University"
+        },
+        "knowsAbout": [
+          "Web Development",
+          "Machine Learning",
+          "Computer Vision",
+          "Explainable AI",
+          "Software Testing",
+          "Quality Assurance"
+        ],
+        "sameAs": [
+          "https://github.com/ihsafy",
+          "https://www.linkedin.com/in/ihsafy",
+          "https://www.facebook.com/ih.safy/",
+          "https://scholar.google.com/citations?user=QoSXWP4AAAAJ&hl=en&authuser=4",
+          "https://www.researchgate.net/profile/Iqbal-Safy"
+        ]
       }
-    }
     </script>
-</head>
-<body>
-
-    <!-- Scroll progress + cursor (non-interactive, aria-hidden) -->
-    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
-    <div class="cursor" data-cursor aria-hidden="true">
-        <span class="cursor-ring"></span>
-    </div>
-
-    <a class="skip-link" href="#main">Skip to main content</a>
-
-    <!-- ============================================================ -->
-    <!-- Header / Navigation                                           -->
-    <!-- ============================================================ -->
-    <header class="site-header" data-header>
-        <div class="container nav">
-            <a href="#hero" class="brand" aria-label="Iqbal Hossain Safy — back to top">
-                <span class="brand-mark" aria-hidden="true">IS</span>
-                <span class="brand-text">Ih&nbsp;Safy</span>
-            </a>
-
-            <nav class="nav-links" id="navLinks" aria-label="Primary">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#ai">AI&nbsp;&amp;&nbsp;Vision</a>
-                <a href="#research">Research</a>
-                <a href="#contact" class="nav-cta">Let's Talk</a>
-            </nav>
-
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
-                    <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-                    <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
-                </button>
-                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-                    <svg class="icon-burger" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
-                    <svg class="icon-close" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-                </button>
-            </div>
-        </div>
-    </header>
-    <div class="nav-scrim" data-nav-scrim hidden></div>
-
-    <main id="main">
-
-        <!-- ============================================================ -->
-        <!-- Hero                                                         -->
-        <!-- ============================================================ -->
-        <section id="hero" class="hero" aria-label="Introduction">
-            <div class="hero-bg" aria-hidden="true"></div>
-
-            <div class="container hero-grid">
-
-                <div class="hero-copy">
-                    <p class="hero-kicker" data-reveal>
-                        <span class="status-dot" aria-hidden="true"></span>
-                        open to opportunities
-                        <span class="kicker-sep" aria-hidden="true">//</span>
-                        <span class="mono">2026</span>
-                    </p>
-
-                    <h1 class="hero-title" data-reveal data-delay="60">
-                        <span class="hero-title-line">Web Developer</span>
-                        <span class="hero-title-line dim">&amp; <span class="grad-text">ML Engineer</span></span>
-                    </h1>
-
-                    <p class="hero-lede" data-reveal data-delay="140">
-                        I'm <strong>Iqbal Hossain Safy</strong> — a <strong>Web Developer &amp; ML Engineer</strong> passionate about
-                        building modern web applications and intelligent solutions powered by
-                        <strong>Machine Learning</strong>, <strong>Computer Vision</strong>, and <strong>Image Processing</strong>.
-                    </p>
-
-                    <div class="hero-cta" data-reveal data-delay="220">
-                        <a href="#projects" class="btn btn-primary magnetic">
-                            View my work
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                        </a>
-                        <a href="#contact" class="btn btn-ghost magnetic">Let's connect</a>
-                    </div>
-
-                    <div class="hero-links" data-reveal data-delay="300" aria-label="Social and contact links">
-                        <a href="https://github.com/ihsafy" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.23-1.27-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.42-2.69 5.38-5.25 5.67.42.36.79 1.08.79 2.17v3.21c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/ihsafy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.6h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg>
-                        </a>
-                        <a href="https://wa.me/8801724612320" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.35zM12.05 21.8h-.01a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.73.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.88-9.9 9.88zm8.36-18.24A11.8 11.8 0 0 0 12.05 0C5.5 0 .18 5.31.18 11.86c0 2.09.55 4.13 1.59 5.93L.1 24l6.35-1.66a11.9 11.9 0 0 0 5.6 1.42h.01c6.55 0 11.86-5.31 11.86-11.86 0-3.17-1.23-6.15-3.5-8.34z"/></svg>
-                        </a>
-                        <a href="https://www.facebook.com/ih.safy/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
-                        </a>
-                        <a href="mailto:ihsafy2k21@gmail.com" aria-label="Send email">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-media" data-reveal data-delay="140">
-                    <div class="hero-visual">
-                        <figure class="hero-photo">
-                            <img
-                                src="./assets/images/profile/safy-portrait-600.webp"
-                                alt="Portrait of Iqbal Hossain Safy"
-                                width="600" height="745"
-                                fetchpriority="high" decoding="async">
-                            <span class="scan-line" aria-hidden="true"></span>
-                        </figure>
-
-                        <ul class="hero-chip hero-chip-a" aria-label="Focus area">
-                            <li>
-                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 .5-.1 1-.3 1.4L17 10h-2l-.4-1.6a4 4 0 0 1-1.2 0L13 10h-2l1.3-2.6A4 4 0 0 1 12 2z"/><path d="M12 21a4 4 0 0 1-4-4M12 21a4 4 0 0 0 4-4"/></svg>
-                                AI / ML
-                            </li>
-                        </ul>
-                        <ul class="hero-chip hero-chip-b" aria-label="Focus area">
-                            <li>Computer Vision</li>
-                            <li aria-hidden="true">·</li>
-                            <li>XAI</li>
-                        </ul>
-                    </div>
-
-                    <div class="hero-term" aria-hidden="true">
-                        <div class="term-bar">
-                            <span></span><span></span><span></span>
-                            <b>research.desk — zsh</b>
-                        </div>
-                        <div class="term-body">
-                            <p><span class="term-prompt">~/safy</span><i>whoami</i></p>
-                            <p class="term-out">iqbal_hossain_safy</p>
-                            <p><span class="term-prompt">~/safy</span><i>cat focus.txt</i></p>
-                            <p class="term-out">computer_vision · xai · ml<span class="term-cursor" aria-hidden="true"></span></p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <a href="#about" class="hero-scroll" data-scroll-hint aria-label="Scroll to About section">
-                <span class="scroll-mouse" aria-hidden="true"></span>
-                <span class="scroll-label" aria-hidden="true">scroll</span>
-            </a>
-        </section>
-
-        <!-- ============================================================ -->
-        <!-- Tech marquee                                                  -->
-        <!-- ============================================================ -->
-        <div class="marquee" aria-hidden="true">
-            <div class="marquee-track">
-                <span>Computer Vision</span><em></em>
-                <span>Python</span><em></em>
-                <span>Explainable AI</span><em></em>
-                <span>JavaScript</span><em></em>
-                <span>Machine Learning</span><em></em>
-                <span>React</span><em></em>
-                <span>Deep Learning</span><em></em>
-                <span>Node.js</span><em></em>
-                <span>Image Processing</span><em></em>
-                <span>PHP</span><em></em>
-                <span>Large Language Models</span><em></em>
-                <span>SQL</span><em></em>
-                <span>Computer Vision</span><em></em>
-                <span>Python</span><em></em>
-                <span>Explainable AI</span><em></em>
-                <span>JavaScript</span><em></em>
-                <span>Machine Learning</span><em></em>
-                <span>React</span><em></em>
-                <span>Deep Learning</span><em></em>
-                <span>Node.js</span><em></em>
-                <span>Image Processing</span><em></em>
-                <span>PHP</span><em></em>
-                <span>Large Language Models</span><em></em>
-                <span>SQL</span><em></em>
-            </div>
-        </div>
-
-        <!-- ============================================================ -->
-        <!-- About                                                         -->
-        <!-- ============================================================ -->
-        <section id="about" class="section" aria-labelledby="about-heading">
-            <div class="container">
-                <p class="eyebrow" data-reveal><span class="eyebrow-idx">01</span>/About</p>
-                <div class="section-head" data-reveal>
-                    <h2 id="about-heading" class="section-title">Engineer by craft, <span class="grad-text">researcher by curiosity</span>.</h2>
-                </div>
-
-                <div class="about-grid">
-                    <div class="about-copy" data-reveal>
-                        <p>
-                            I'm a Computer Science graduate from <strong>East West University</strong>, currently focused on
-                            building practical, responsive, genuinely useful web applications while steadily deepening my
-                            full-stack skills.
-                        </p>
-                        <p>
-                            In parallel, I keep an active research practice in
-                            <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong>, and
-                            <strong>Computer Vision</strong> — spanning medical image analysis, agricultural applications,
-                            Explainable AI (XAI), and Large Language Models.
-                        </p>
-                        <p>
-                            The goal is simple: combine thoughtful software engineering with emerging AI to build tools
-                            that make a real difference — not demos that stay on a screen.
-                        </p>
-
-                        <div class="about-meta" aria-label="Profile details">
-                            <div class="meta-row"><span>name</span><b>Iqbal Hossain Safy</b></div>
-                            <div class="meta-row"><span>base</span><b>Dhaka, Bangladesh</b></div>
-                            <div class="meta-row"><span>education</span><b>BSc CSE — East West University</b></div>
-                            <div class="meta-row"><span>status</span><b class="ok">open to opportunities</b></div>
-                        </div>
-                    </div>
-
-                    <div class="about-side" data-reveal data-delay="100">
-                        <div class="about-focus">
-                            <span class="side-label">What drives me</span>
-                            <ul class="focus-list">
-                                <li>
-                                    <span class="focus-icon" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg>
-                                    </span>
-                                    <span>Building real, reliable software</span>
-                                </li>
-                                <li>
-                                    <span class="focus-icon" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
-                                    </span>
-                                    <span>Making AI transparent &amp; interpretable</span>
-                                </li>
-                                <li>
-                                    <span class="focus-icon" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.5 9.5C5.5 12.54 8 15 11.5 15c0-3.5-2.5-6-6-5.5zM5 5c3.5 0 6.5 2.5 7.5 6 3-.5 5-2.5 5-5.5-3 0-5.5 1.5-7 3.5A6 6 0 0 0 5 5z"/></svg>
-                                    </span>
-                                    <span>Biomedical &amp; agricultural imaging</span>
-                                </li>
-                                <li>
-                                    <span class="focus-icon" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M7 12V8"/></svg>
-                                    </span>
-                                    <span>Research that reaches real users</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="about-stats" aria-label="Highlights">
-                            <div class="stat">
-                                <b>3</b>
-                                <span>peer-reviewed<br>papers</span>
-                            </div>
-                            <div class="stat">
-                                <b>5</b>
-                                <span>research<br>outputs</span>
-                            </div>
-                            <div class="stat">
-                                <b>4</b>
-                                <span>projects<br>built</span>
-                            </div>
-                            <div class="stat">
-                                <b>2</b>
-                                <span>fields:<br>vision + XAI</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================ -->
-        <!-- Skills                                                        -->
-        <!-- ============================================================ -->
-        <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
-            <div class="container">
-                <p class="eyebrow" data-reveal><span class="eyebrow-idx">02</span>/Stack</p>
-                <div class="section-head head-row" data-reveal>
-                    <h2 id="skills-heading" class="section-title">Toolbox &amp; <span class="grad-text">technologies</span></h2>
-                    <p class="section-sub">The languages, frameworks, and workflows I reach for.</p>
-                </div>
-
-                <div class="skill-tabs" role="tablist" aria-label="Filter technologies by category" data-reveal>
-                    <button class="skill-tab is-active" id="tab-all" role="tab" aria-selected="true" aria-controls="panel-skills" data-filter="all">All</button>
-                    <button class="skill-tab" id="tab-languages" role="tab" aria-selected="false" aria-controls="panel-skills" data-filter="languages">Languages</button>
-                    <button class="skill-tab" id="tab-frontend" role="tab" aria-selected="false" aria-controls="panel-skills" data-filter="frontend">Frontend</button>
-                    <button class="skill-tab" id="tab-backend" role="tab" aria-selected="false" aria-controls="panel-skills" data-filter="backend">Backend &amp; Data</button>
-                    <button class="skill-tab" id="tab-tools" role="tab" aria-selected="false" aria-controls="panel-skills" data-filter="tools">Tools &amp; Workflow</button>
-                </div>
-
-                <div class="skills-grid" id="panel-skills" role="tabpanel" aria-labelledby="tab-all" data-reveal>
-                    <article class="tech-card" data-cat="languages">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-python"/></svg></div>
-                        <h3>Python</h3>
-                        <p>Programming Language</p>
-                    </article>
-                    <article class="tech-card is-learning" data-cat="languages">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-javascript"/></svg></div>
-                        <h3>JavaScript</h3>
-                        <p>Programming Language</p>
-                        <span class="learn-stage">
-                            <span class="learn-dot" aria-hidden="true"></span>
-                            Learning
-                        </span>
-                        <span class="learn-bar" aria-hidden="true"></span>
-                    </article>
-                    <article class="tech-card" data-cat="languages">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-openjdk"/></svg></div>
-                        <h3>Java</h3>
-                        <p>Programming Language</p>
-                    </article>
-                    <article class="tech-card" data-cat="languages">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-c"/></svg></div>
-                        <h3>C</h3>
-                        <p>Programming Language</p>
-                    </article>
-                    <article class="tech-card" data-cat="languages">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-cplusplus"/></svg></div>
-                        <h3>C++</h3>
-                        <p>Programming Language</p>
-                    </article>
-
-                    <article class="tech-card is-learning" data-cat="frontend">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-html5"/></svg></div>
-                        <h3>HTML5</h3>
-                        <p>Markup</p>
-                        <span class="learn-stage">
-                            <span class="learn-dot" aria-hidden="true"></span>
-                            Learning
-                        </span>
-                        <span class="learn-bar" aria-hidden="true"></span>
-                    </article>
-                    <article class="tech-card is-learning" data-cat="frontend">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-css3"/></svg></div>
-                        <h3>CSS3</h3>
-                        <p>Styling</p>
-                        <span class="learn-stage">
-                            <span class="learn-dot" aria-hidden="true"></span>
-                            Learning
-                        </span>
-                        <span class="learn-bar" aria-hidden="true"></span>
-                    </article>
-                    <article class="tech-card is-learning" data-cat="frontend">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-react"/></svg></div>
-                        <h3>React</h3>
-                        <p>UI Framework</p>
-                        <span class="learn-stage">
-                            <span class="learn-dot" aria-hidden="true"></span>
-                            Learning
-                        </span>
-                        <span class="learn-bar" aria-hidden="true"></span>
-                    </article>
-
-                    <article class="tech-card is-learning" data-cat="backend">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-nodedotjs"/></svg></div>
-                        <h3>Node.js</h3>
-                        <p>Runtime</p>
-                        <span class="learn-stage">
-                            <span class="learn-dot" aria-hidden="true"></span>
-                            Learning
-                        </span>
-                        <span class="learn-bar" aria-hidden="true"></span>
-                    </article>
-                    <article class="tech-card" data-cat="backend">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-php"/></svg></div>
-                        <h3>PHP</h3>
-                        <p>Server-side</p>
-                    </article>
-                    <article class="tech-card" data-cat="backend">
-                        <div class="tech-icon tech-sql" aria-hidden="true"><svg><use href="#i-database"/></svg></div>
-                        <h3>SQL &amp; Databases</h3>
-                        <p>Relational Data</p>
-                    </article>
-
-                    <article class="tech-card" data-cat="tools">
-                        <div class="tech-icon tech-mono" aria-hidden="true"><svg><use href="#i-github"/></svg></div>
-                        <h3>GitHub</h3>
-                        <p>Version Control</p>
-                    </article>
-                    <article class="tech-card" data-cat="tools">
-                        <div class="tech-icon" aria-hidden="true"><svg><use href="#i-jupyter"/></svg></div>
-                        <h3>Jupyter</h3>
-                        <p>Notebooks / Research</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================ -->
-        <!-- Projects                                                      -->
-        <!-- ============================================================ -->
-        <section id="projects" class="section" aria-labelledby="projects-heading">
-            <div class="container">
-                <p class="eyebrow" data-reveal><span class="eyebrow-idx">03</span>/Work</p>
-                <div class="section-head head-row" data-reveal>
-                    <h2 id="projects-heading" class="section-title">Selected <span class="grad-text">work</span></h2>
-                    <p class="section-sub">A thesis at the centre, and the applications that sharpened the fundamentals.</p>
-                </div>
-
-                <article class="project-featured" data-reveal>
-                    <div class="pf-body">
-                        <span class="project-tag">Undergraduate Thesis · Computer Vision</span>
-                        <h3 class="pf-name">Machine Learning Driven Detection of Dental Irregularities in Panoramic Radiographs</h3>
-                        <p class="pf-desc">
-                            My primary undergraduate thesis. Advanced machine learning and computer vision methods applied to
-                            medical image analysis — identifying dental irregularities within panoramic dental radiographs.
-                            The work lives at the intersection of medical imaging and interpretable AI.
-                        </p>
-                        <div class="project-stack">
-                            <span>Machine Learning</span>
-                            <span>Computer Vision</span>
-                            <span>Medical Image Analysis</span>
-                            <span>XAI</span>
-                        </div>
-                    </div>
-                    <div class="pf-visual" aria-hidden="true">
-                        <svg viewBox="0 0 320 240" class="xray" role="img">
-                            <defs>
-                                <linearGradient id="xray-bg" x1="0" y1="0" x2="1" y2="1">
-                                    <stop offset="0" stop-color="currentColor" stop-opacity="0.10"/>
-                                    <stop offset="1" stop-color="currentColor" stop-opacity="0.02"/>
-                                </linearGradient>
-                            </defs>
-                            <rect x="1" y="1" width="318" height="238" rx="14" fill="none" stroke="currentColor" stroke-opacity="0.14" stroke-width="1.5"/>
-                            <path d="M160 54 C 210 54 238 86 238 124 C 238 178 206 204 160 204 C 114 204 82 178 82 124 C 82 86 110 54 160 54 Z"
-                                  fill="url(#xray-bg)" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.5"/>
-                            <g fill="currentColor" fill-opacity="0.55">
-                                <circle cx="118" cy="98" r="9"/><circle cx="142" cy="86" r="11"/>
-                                <circle cx="168" cy="82" r="11"/><circle cx="194" cy="90" r="9"/>
-                                <circle cx="128" cy="128" r="9"/><circle cx="153" cy="120" r="11"/>
-                                <circle cx="179" cy="120" r="11"/><circle cx="202" cy="134" r="9"/>
-                                <circle cx="140" cy="162" r="9"/><circle cx="166" cy="158" r="11"/>
-                            </g>
-                            <circle cx="168" cy="82" r="16" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-width="1.5"/>
-                            <circle cx="168" cy="82" r="9" fill="currentColor" fill-opacity="0.25"/>
-                            <line x1="4" y1="120" x2="316" y2="120" stroke="currentColor" stroke-opacity="0.12"/>
-                            <line x1="8" y1="72" x2="312" y2="72" stroke="currentColor" stroke-opacity="0.08"/>
-                            <line x1="8" y1="168" x2="312" y2="168" stroke="currentColor" stroke-opacity="0.08"/>
-                            <g fill="currentColor" fill-opacity="0.6" font-family="ui-monospace,monospace" font-size="8" letter-spacing="1">
-                                <text x="12" y="20">PANORAMIC::DENTAL</text>
-                                <text x="12" y="232">IMG_0412 · 1080×720</text>
-                                <text x="244" y="232">THESIS-2026</text>
-                            </g>
-                        </svg>
-                    </div>
-                </article>
-
-                <div class="projects-grid">
-                    <article class="project-card" data-reveal>
-                        <div class="pc-top">
-                            <span class="pc-glyph" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l4 4v16H6z"/><path d="M15 2v4h4M9 13h6M9 17h3"/></svg>
-                            </span>
-                            <span class="project-tag">Web Development</span>
-                        </div>
-                        <h3 class="project-name">RORA Luxe Marketplace</h3>
-                        <p class="project-desc">An e-commerce marketplace platform built with PHP and SQL to manage products, users, and transactions.</p>
-                        <div class="project-stack">
-                            <span>PHP</span><span>SQL</span><span>Web App</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-reveal data-delay="70">
-                        <div class="pc-top">
-                            <span class="pc-glyph" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h6a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H2z"/><path d="M22 4h-6a3 3 0 0 0-3 3v13a2.5 2.5 0 0 1 2.5-2.5H22z"/></svg>
-                            </span>
-                            <span class="project-tag">Web Development</span>
-                        </div>
-                        <h3 class="project-name">Book Seekers</h3>
-                        <p class="project-desc">A PHP-based online book discovery and management system built for seamless browsing and cataloging.</p>
-                        <div class="project-stack">
-                            <span>PHP</span><span>Web App</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-reveal data-delay="140">
-                        <div class="pc-top">
-                            <span class="pc-glyph" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/><path d="M2 7h20l-2-3H4z"/></svg>
-                            </span>
-                            <span class="project-tag">Web Development</span>
-                        </div>
-                        <h3 class="project-name">EWU Food Hub</h3>
-                        <p class="project-desc">A campus food ordering and management application built to streamline university food service.</p>
-                        <div class="project-stack">
-                            <span>HTML/CSS</span><span>PHP</span><span>SQL</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================ -->
-        <!-- AI / ML & Computer Vision                                     -->
-        <!-- ============================================================ -->
-        <section id="ai" class="section section-alt" aria-labelledby="ai-heading">
-            <div class="container">
-                <p class="eyebrow" data-reveal><span class="eyebrow-idx">04</span>/Intelligence</p>
-                <div class="section-head" data-reveal>
-                    <h2 id="ai-heading" class="section-title">AI, Machine Learning <span class="grad-text">&amp; Computer Vision</span></h2>
-                    <p class="section-sub">Interpretable models, medical and agricultural imaging, and research that explains its own decisions.</p>
-                </div>
-
-                <div class="ai-grid">
-                    <div class="ai-col">
-                        <h3 class="ai-col-title">
-                            <span class="ai-col-ico" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 .5-.1 1-.3 1.4L17 10h-2l-.4-1.6a4 4 0 0 1-1.2 0L13 10h-2l1.3-2.6A4 4 0 0 1 12 2z"/><path d="M12 21a4 4 0 0 1-4-4M12 21a4 4 0 0 0 4-4"/></svg>
-                            </span>
-                            Machine Learning &amp; AI
-                        </h3>
-                        <ul class="ai-list">
-                            <li data-reveal>
-                                <span class="ai-list-ico" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="6" cy="19" r="2.5"/><path d="M6 7.5v9M8.2 6.2l7.6.6M8 16.8l7.8-9"/></svg>
-                                </span>
-                                <div><b>Supervised &amp; classical ML</b><p>Feature selection, classification pipelines, and evaluation for trustworthy predictions.</p></div>
-                            </li>
-                            <li data-reveal>
-                                <span class="ai-list-ico" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 .5-.1 1-.3 1.4L17 10h-2l-.4-1.6a4 4 0 0 1-1.2 0L13 10h-2l1.3-2.6A4 4 0 0 1 12 2z"/><path d="M12 21a4 4 0 0 1-4-4M12 21a4 4 0 0 0 4-4"/></svg>
-                                </span>
-                                <div><b>Deep learning &amp; CNN pipelines</b><p>End-to-end convolutional models designed and evaluated for real imaging tasks.</p></div>
-                            </li>
-                            <li data-reveal>
-                                <span class="ai-list-ico" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
-                                </span>
-                                <div><b>Explainable AI (XAI)</b><p>Grad-CAM saliency and feature-selection techniques that show <i>why</i> a model decides.</p></div>
-                            </li>
-                            <li data-reveal>
-                                <span class="ai-list-ico" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg>
-                                </span>
-                                <div><b>Large Language Models</b><p>Applying and evaluating LLMs as practical tools in software and research workflows.</p></div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="ai-col">
-                        <h3 class="ai-col-title">
-                            <span class="ai-col-ico" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 .5-.1 1-.3 1.4L17 10h-2l-.4-1.6a4 4 0 0 1-1.2 0L13 10h-2l1.3-2.6A4 4 0 0 1 12 2z"/><path d="M12 21a4 4 0 0 1-4-4M12 21a4 4 0 0 0 4-4"/></svg>
-                            </span>
-                            Computer Vision &amp; Imaging
-                        </h3>
-                        <ul class="ai-list">
-                            <li data-reveal>
-                                <span class="ai-list-ico" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>
-                                </span>
-                                <div><b>Medical image analysis</b><p>Dental radiographs, breast tissue, and malaria blood smears — turning pixels into evidence.</p></div>
-                            </li>
-                            <li data-reveal>
-                                <span class="ai-list-ico" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20a7 7 0 0 1-7-7V9a2 2 0 0 1 2-2h2"/><path d="M13 20a7 7 0 0 0 7-7V9a2 2 0 0 0-2-2h-2"/><path d="M6 8V6a3 3 0 0 1 3-3h1M18 8V6a3 3 0 0 0-3-3h-1"/><path d="M12 7v13"/></svg>
-                                </span>
-                                <div><b>Agricultural vision</b><p>Crop–weed discrimination and field-based rice disease datasets collected on real smartphone imagery.</p></div>
-                            </li>
-                            <li data-reveal>
-                                <span class="ai-list-ico" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18M3 12h18M3 19h18"/><rect x="5" y="8" width="6" height="6" rx="1"/><rect x="14" y="3" width="5" height="5" rx="1"/><rect x="14" y="17" width="5" height="4" rx="1"/></svg>
-                                </span>
-                                <div><b>Image processing</b><p>Preprocessing, augmentation, segmentation, and feature extraction for computer-vision models.</p></div>
-                            </li>
-                            <li data-reveal>
-                                <span class="ai-list-ico" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-4.5-4.5L6 21"/></svg>
-                                </span>
-                                <div><b>Recognition &amp; classification</b><p>Weakly supervised and hybrid architectures for detection and diagnosis in the wild.</p></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="pipeline" data-reveal aria-label="Research workflow">
-                    <div class="pipeline-step">
-                        <span class="step-idx">01</span>
-                        <b>Dataset</b>
-                        <p>Curated, annotated field &amp; clinical data</p>
-                    </div>
-                    <span class="pipeline-arrow" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </span>
-                    <div class="pipeline-step">
-                        <span class="step-idx">02</span>
-                        <b>Preprocessing</b>
-                        <p>Clean, normalize &amp; augment imagery</p>
-                    </div>
-                    <span class="pipeline-arrow" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </span>
-                    <div class="pipeline-step">
-                        <span class="step-idx">03</span>
-                        <b>Model</b>
-                        <p>Train ML / deep-learning architectures</p>
-                    </div>
-                    <span class="pipeline-arrow" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </span>
-                    <div class="pipeline-step">
-                        <span class="step-idx">04</span>
-                        <b>Explain</b>
-                        <p>Interpret decisions with XAI</p>
-                    </div>
-                    <span class="pipeline-arrow" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </span>
-                    <div class="pipeline-step">
-                        <span class="step-idx">05</span>
-                        <b>Publish</b>
-                        <p>Evaluate rigorously &amp; share findings</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================ -->
-        <!-- Research                                                      -->
-        <!-- ============================================================ -->
-        <section id="research" class="section" aria-labelledby="research-heading">
-            <div class="container">
-                <p class="eyebrow" data-reveal><span class="eyebrow-idx">05</span>/Research</p>
-                <div class="section-head" data-reveal>
-                    <h2 id="research-heading" class="section-title">Publications <span class="grad-text">&amp; datasets</span></h2>
-                    <p class="section-sub">Interpretable AI across medical imaging and precision agriculture.</p>
-                </div>
-
-                <ol class="research-list">
-                    <li class="research-item is-published" data-reveal>
-                        <div class="research-meta">
-                            <span class="pub-idx">01</span>
-                            <span class="pub-pill">Conference</span>
-                            <span class="pub-status" data-state="published">Published</span>
-                        </div>
-                        <h3 class="research-title">Grad-CAM Assisted Weakly Supervised Pipeline for Potato Crop–Weed Detection in Precision Agriculture</h3>
-                        <div class="research-tags" aria-label="Topics">
-                            <span>Computer Vision</span><span>Precision Agriculture</span><span>XAI</span>
-                        </div>
-                    </li>
-
-                    <li class="research-item is-published" data-reveal>
-                        <div class="research-meta">
-                            <span class="pub-idx">02</span>
-                            <span class="pub-pill">Conference</span>
-                            <span class="pub-status" data-state="published">Published</span>
-                        </div>
-                        <h3 class="research-title">SA-MLP: Accurate and Interpretable Breast Cancer Detection with Feature Selection and Explainable AI</h3>
-                        <div class="research-tags" aria-label="Topics">
-                            <span>Medical Imaging</span><span>Feature Selection</span><span>XAI</span>
-                        </div>
-                    </li>
-
-                    <li class="research-item is-published" data-reveal>
-                        <div class="research-meta">
-                            <span class="pub-idx">03</span>
-                            <span class="pub-pill">Conference</span>
-                            <span class="pub-status" data-state="published">Published</span>
-                        </div>
-                        <h3 class="research-title">Explainable Hybrid Convolutional Networks for Accurate Malaria Diagnosis in Blood Smear Images</h3>
-                        <div class="research-tags" aria-label="Topics">
-                            <span>Medical Imaging</span><span>Deep Learning</span><span>XAI</span>
-                        </div>
-                    </li>
-
-                    <li class="research-item is-pending" data-reveal>
-                        <div class="research-meta">
-                            <span class="pub-idx">04</span>
-                            <span class="pub-pill">Dataset / Journal</span>
-                            <span class="pub-status" data-state="pending">Under review</span>
-                        </div>
-                        <h3 class="research-title">RiceLeafDiseaseBD: A Field-Based Annotated Smartphone Image Dataset of Healthy and Diseased Rice Leaves from Bangladesh</h3>
-                        <p class="research-note">Submitted to BMC Research Notes</p>
-                        <div class="research-tags" aria-label="Topics">
-                            <span>Dataset</span><span>Agricultural Vision</span>
-                        </div>
-                    </li>
-
-                    <li class="research-item is-pending" data-reveal>
-                        <div class="research-meta">
-                            <span class="pub-idx">05</span>
-                            <span class="pub-pill">Dataset</span>
-                            <span class="pub-status" data-state="pending">Manuscript under review</span>
-                        </div>
-                        <h3 class="research-title">FloraBD: A Field-Collected Dataset</h3>
-                        <div class="research-tags" aria-label="Topics">
-                            <span>Dataset</span><span>Field Collection</span>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- ============================================================ -->
-        <!-- Experience & Education                                        -->
-        <!-- ============================================================ -->
-        <section id="experience" class="section section-alt" aria-labelledby="experience-heading">
-            <div class="container">
-                <p class="eyebrow" data-reveal><span class="eyebrow-idx">06</span>/Background</p>
-                <div class="section-head" data-reveal>
-                    <h2 id="experience-heading" class="section-title">Experience <span class="grad-text">&amp; education</span></h2>
-                </div>
-
-                <div class="timeline-cols">
-                    <div class="timeline">
-                        <h3 class="timeline-caption">Experience</h3>
-                        <article class="timeline-item" data-reveal>
-                            <span class="timeline-date" aria-label="May 2026 to present">2026 — Present</span>
-                            <h4 class="timeline-role">Software Sales &amp; Software Testing</h4>
-                            <p class="timeline-org">Global IT Solutions</p>
-                            <p class="timeline-text">Client-facing software consulting alongside hands-on product testing and quality assurance.</p>
-                        </article>
-                        <article class="timeline-item" data-reveal>
-                            <span class="timeline-date">2025 — 2026</span>
-                            <h4 class="timeline-role">Volunteer Coordinator</h4>
-                            <p class="timeline-org">East West University Science Club</p>
-                            <p class="timeline-text">Coordinating volunteers and events to keep a student-led science community active and organised.</p>
-                        </article>
-                    </div>
-
-                    <div class="timeline">
-                        <h3 class="timeline-caption">Education</h3>
-                        <article class="timeline-item" data-reveal>
-                            <span class="timeline-date">2022 — 2026</span>
-                            <h4 class="timeline-role">BSc in Computer Science &amp; Engineering</h4>
-                            <p class="timeline-org">East West University</p>
-                            <p class="timeline-text"><strong>Thesis:</strong> Machine Learning Driven Detection of Dental Irregularities in Panoramic Radiographs</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================ -->
-        <!-- Contact                                                       -->
-        <!-- ============================================================ -->
-        <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
-            <div class="container contact-inner">
-                <p class="eyebrow" data-reveal><span class="eyebrow-idx">07</span>/Contact</p>
-                <h2 id="contact-heading" class="contact-title" data-reveal>Let's build something <span class="grad-text">meaningful</span>.</h2>
-                <p class="contact-sub" data-reveal>
-                    Open to web development projects, research collaborations, and conversations in AI &amp; Computer Vision.
-                </p>
-
-                <ul class="contact-methods" data-reveal data-delay="80">
-                    <li>
-                        <a href="mailto:ihsafy2k21@gmail.com" class="contact-item">
-                            <span class="contact-ico" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-                            </span>
-                            <span>
-                                <small>Email</small>
-                                ihsafy2k21@gmail.com
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/ihsafy" target="_blank" rel="noopener noreferrer" class="contact-item">
-                            <span class="contact-ico" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.6h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg>
-                            </span>
-                            <span>
-                                <small>LinkedIn</small>
-                                in/iqbal-hossain-safy
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+8801724612320" class="contact-item">
-                            <span class="contact-ico" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            </span>
-                            <span>
-                                <small>Phone</small>
-                                +880 1724 612320
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/ihsafy" target="_blank" rel="noopener noreferrer" class="contact-item">
-                            <span class="contact-ico" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.23-1.27-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.42-2.69 5.38-5.25 5.67.42.36.79 1.08.79 2.17v3.21c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
-                            </span>
-                            <span>
-                                <small>GitHub</small>
-                                @ihsafy
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ============================================================ -->
-    <!-- Footer                                                       -->
-    <!-- ============================================================ -->
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <span class="footer-logo">Iqbal Hossain Safy</span>
-                <p>Web Developer &amp; ML Engineer. Building modern web applications and intelligent solutions powered by Machine Learning, Computer Vision, and Image Processing.</p>
-                <p class="footer-clock mono"><span id="clock" hidden></span></p>
-            </div>
-            <nav class="footer-nav" aria-label="Footer">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#ai">AI &amp; Vision</a>
-                <a href="#research">Research</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <div class="footer-social" aria-label="Social links">
-                <a href="https://github.com/ihsafy" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.23-1.27-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.42-2.69 5.38-5.25 5.67.42.36.79 1.08.79 2.17v3.21c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/ihsafy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.6h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/ih.safy/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
-                </a>
-                <a href="https://wa.me/8801724612320" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.35zM12.05 21.8h-.01a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.73.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.88-9.9 9.88zm8.36-18.24A11.8 11.8 0 0 0 12.05 0C5.5 0 .18 5.31.18 11.86c0 2.09.55 4.13 1.59 5.93L.1 24l6.35-1.66a11.9 11.9 0 0 0 5.6 1.42h.01c6.55 0 11.86-5.31 11.86-11.86 0-3.17-1.23-6.15-3.5-8.34z"/></svg>
-                </a>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="year">2026</span> Iqbal Hossain Safy. All rights reserved.</p>
-                <button class="back-top" id="backTop" type="button" aria-label="Back to top">
-                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-                </button>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Technology logo sprite -->
-    <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-python" viewBox="0 0 24 24"><path fill="#3776AB" d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></symbol><symbol id="i-javascript" viewBox="0 0 24 24"><path fill="#F7DF1E" d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></symbol><symbol id="i-openjdk" viewBox="0 0 24 24"><path fill="#E76F00" d="M11.915 0 11.7.215C9.515 2.4 7.47 6.39 6.046 10.483c-1.064 1.024-3.633 2.81-3.711 3.551-.093.87 1.746 2.611 1.55 3.235-.198.625-1.304 1.408-1.014 1.939.1.188.823.011 1.277-.491a13.389 13.389 0 0 0-.017 2.14c.076.906.27 1.668.643 2.232.372.563.956.911 1.667.911.397 0 .727-.114 1.024-.264.298-.149.571-.33.91-.5.68-.34 1.634-.666 3.53-.604 1.903.062 2.872.39 3.559.704.687.314 1.15.664 1.925.664.767 0 1.395-.336 1.807-.9.412-.563.631-1.33.72-2.24.06-.623.055-1.32 0-2.066.454.45 1.117.604 1.213.424.29-.53-.816-1.314-1.013-1.937-.198-.624 1.642-2.366 1.549-3.236-.08-.748-2.707-2.568-3.748-3.586C16.428 6.374 14.308 2.394 12.13.215zm.175 6.038a2.95 2.95 0 0 1 2.943 2.942 2.95 2.95 0 0 1-2.943 2.943A2.95 2.95 0 0 1 9.148 8.98a2.95 2.95 0 0 1 2.942-2.942zM8.685 7.983a3.515 3.515 0 0 0-.145.997c0 1.951 1.6 3.55 3.55 3.55 1.95 0 3.55-1.598 3.55-3.55 0-.329-.046-.648-.132-.951.334.095.64.208.915.336a42.699 42.699 0 0 1 2.042 5.829c.678 2.545 1.01 4.92.846 6.607-.082.844-.29 1.51-.606 1.94-.315.431-.713.651-1.315.651-.593 0-.932-.27-1.673-.61-.741-.338-1.825-.694-3.792-.758-1.974-.064-3.073.293-3.821.669-.375.188-.659.373-.911.5s-.466.2-.752.2c-.53 0-.876-.209-1.16-.64-.285-.43-.474-1.101-.545-1.948-.141-1.693.176-4.069.823-6.614a43.155 43.155 0 0 1 1.934-5.783c.348-.167.749-.31 1.192-.425zm-3.382 4.362a.216.216 0 0 1 .13.031c-.166.56-.323 1.116-.463 1.665a33.849 33.849 0 0 0-.547 2.555 3.9 3.9 0 0 0-.2-.39c-.58-1.012-.914-1.642-1.16-2.08.315-.24 1.679-1.755 2.24-1.781zm13.394.01c.562.027 1.926 1.543 2.24 1.783-.246.438-.58 1.068-1.16 2.08a4.428 4.428 0 0 0-.163.309 32.354 32.354 0 0 0-.562-2.49 40.579 40.579 0 0 0-.482-1.652.216.216 0 0 1 .127-.03z"/></symbol><symbol id="i-c" viewBox="0 0 24 24"><path fill="#A8B9CC" d="M16.5921 9.1962s-.354-3.298-3.627-3.39c-3.2741-.09-4.9552 2.474-4.9552 6.14 0 3.6651 1.858 6.5972 5.0451 6.5972 3.184 0 3.5381-3.665 3.5381-3.665l6.1041.365s.36 3.31-2.196 5.836c-2.552 2.5241-5.6901 2.9371-7.8762 2.9201-2.19-.017-5.2261.034-8.1602-2.97-2.938-3.0101-3.436-5.9302-3.436-8.8002 0-2.8701.556-6.6702 4.047-9.5502C7.444.72 9.849 0 12.254 0c10.0422 0 10.7172 9.2602 10.7172 9.2602z"/></symbol><symbol id="i-cplusplus" viewBox="0 0 24 24"><path fill="#00599C" d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.11-7.11a7.133 7.133 0 016.156 3.553l-3.076 1.78a3.567 3.567 0 00-3.08-1.78A3.56 3.56 0 008.444 12 3.56 3.56 0 0012 15.555a3.57 3.57 0 003.08-1.778l3.078 1.78A7.135 7.135 0 0112 19.11zm7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/></symbol><symbol id="i-html5" viewBox="0 0 24 24"><path fill="#E34F26" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></symbol><symbol id="i-css3" viewBox="0 0 24 24"><path fill="#1572B6" d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63"/></symbol><symbol id="i-react" viewBox="0 0 24 24"><path fill="#61DAFB" d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></symbol><symbol id="i-nodedotjs" viewBox="0 0 24 24"><path fill="#339933" d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24zM19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/></symbol><symbol id="i-php" viewBox="0 0 24 24"><path fill="#777BB4" d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z"/></symbol><symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol><symbol id="i-jupyter" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"/></symbol><symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></symbol></svg>
-
-    <script src="js/main.js" defer></script>
-</body>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Iqbal Hossain Safy",
+        "url": "https://ihsafy.vercel.app/",
+        "description": "Portfolio of Iqbal Hossain Safy — Web Developer, Machine Learning & Computer Vision, and App Tester at Taraa AI Technology.",
+        "author": {
+          "@type": "Person",
+          "name": "Iqbal Hossain Safy"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

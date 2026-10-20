@@ -1,0 +1,21 @@
+{
+  "name": "Iqbal Hossain Safy \u2014 Web Developer, Machine Learning & App Tester",
+  "short_name": "Ih Safy",
+  "description": "Portfolio of Iqbal Hossain Safy \u2014 Web Developer, Machine Learning & Computer Vision, and App Tester at Taraa AI Technology.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f4ec",
+  "theme_color": "#f7f4ec",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
