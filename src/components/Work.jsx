@@ -82,7 +82,7 @@ export default function Work() {
               <article className="proj-row__inner">
                 <span className="proj-row__idx">{project.index}</span>
                 <h3 className="proj-row__title">{project.title}</h3>
-                <div>
+                <div className="proj-row__detail">
                   <p className="proj-row__text">{project.description}</p>
                   <ul className="proj-row__stack" aria-label="Technologies">
                     {project.stack.map((tech) => (

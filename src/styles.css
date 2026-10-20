@@ -2585,9 +2585,13 @@ html:not(.reveal-armed) .icon-chip {
   .proj-row__inner {
     grid-template-columns: minmax(0, 2.2rem) minmax(0, 1fr);
     gap: 0.6rem 0.9rem;
+    align-items: start;
   }
 
-  .proj-row__text,
+  /* The index stays in column 1; the title, detail block and links all occupy
+     the wide second column so the description never collapses into a sliver. */
+  .proj-row__title,
+  .proj-row__detail,
   .proj-row__links {
     grid-column: 2;
   }
