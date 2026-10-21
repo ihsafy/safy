@@ -2,6 +2,13 @@ import { useEffect, useId, useState } from 'react'
 import { nav, profile } from '../data/content.js'
 import { useStuckHeader } from '../hooks.js'
 
+/* The header's red CTA already links to the Contact section, so the desktop
+   nav list drops its own Contact item to avoid showing two identical actions
+   side by side. The mobile menu keeps the full list (see below), because there
+   the red CTA is hidden and the menu is the only way to reach Contact. */
+const CONTACT_ID = 'contact'
+const desktopNav = nav.filter((item) => item.id !== CONTACT_ID)
+
 export default function Header({ activeSection }) {
   const [open, setOpen] = useState(false)
   const menuId = useId()
@@ -29,7 +36,7 @@ export default function Header({ activeSection }) {
 
         <nav className="site-nav" aria-label="Sections">
           <ul className="site-nav__list">
-            {nav.map((item, i) => (
+            {desktopNav.map((item, i) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}

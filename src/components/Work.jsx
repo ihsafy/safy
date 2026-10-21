@@ -80,8 +80,10 @@ export default function Work() {
           {rest.map((project) => (
             <li className="proj-row" key={project.id} data-reveal>
               <article className="proj-row__inner">
-                <span className="proj-row__idx">{project.index}</span>
-                <h3 className="proj-row__title">{project.title}</h3>
+                <h3 className="proj-row__title">
+                  <span className="proj-row__idx">{project.index}</span>
+                  {project.title}
+                </h3>
                 <div className="proj-row__detail">
                   <p className="proj-row__text">{project.description}</p>
                   <ul className="proj-row__stack" aria-label="Technologies">

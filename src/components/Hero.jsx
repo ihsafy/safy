@@ -74,7 +74,10 @@ export default function Hero() {
                   </span>
                 </span>
               </a>
-              <a className="btn btn--ghost" href="#contact">
+              {/* Secondary contact affordance for mobile, where the header's red
+                  CTA is hidden. On desktop the header CTA covers this, so the
+                  button is dropped to keep exactly one Contact action. */}
+              <a className="btn btn--ghost hero__contact" href="#contact">
                 <span className="btn__label">Contact Me</span>
               </a>
             </div>
